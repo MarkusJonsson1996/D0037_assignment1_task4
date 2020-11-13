@@ -2,13 +2,9 @@
 #include <string>
 using namespace std;
 
-//#define TASK4
-#define TASK5
-
 int main() {
-	
+
 	int qi = 0;
-	char c_awnser[15];
 	string awnser;
 
 	string questions[6] = { "What's your name? ",
@@ -31,13 +27,7 @@ int main() {
 	while (qi < 6) {
 		cout << questions[qi];
 
-#ifdef TASK4
 		cin >> awnser;
-#endif
-#ifdef TASK5
-		scanf("%14s", c_awnser);
-		awnser.assign(c_awnser);
-#endif
 
 		switch (qi)
 		{
@@ -74,7 +64,7 @@ int main() {
 
 		qi++;
 	}
-#ifdef TASK4
+
 	cout << endl;
 	cout << "You've entered: " << endl;
 	cout << "Name: " << per1.name << endl;
@@ -88,17 +78,6 @@ int main() {
 		cout << "Married: No" << endl;
 
 	cout << "Height: " << per1.height << endl;
-#endif
 
-#ifdef TASK5
-	printf("\nYou've entered: \n");
-	printf("Name: %s\n", per1.name.c_str());
-	printf("Age: %i\n", per1.age);
-	printf("Gender: %s\n", per1.gender.c_str());
-	printf("Adress: %s\n", per1.adress.c_str());
-	printf("Married: %i\n", per1.married);
-	printf("Height: %f\n", per1.height);
-
-
-#endif
+	return 0;
 }
